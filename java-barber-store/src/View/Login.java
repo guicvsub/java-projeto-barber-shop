@@ -40,7 +40,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         entrar_bt.setText("Entrar");
-        getContentPane().add(entrar_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 690, -1, -1));
+        getContentPane().add(entrar_bt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 690, -1, -1));
         getContentPane().add(password_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 240, -1));
 
         user_tx.addActionListener(new java.awt.event.ActionListener() {

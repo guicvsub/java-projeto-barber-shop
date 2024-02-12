@@ -27,20 +27,148 @@ public class agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bg_paine = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        serviço_box = new javax.swing.JComboBox<>();
+        box_cliente = new javax.swing.JComboBox<>();
+        hora_tx = new javax.swing.JTextField();
+        data_tx = new javax.swing.JTextField();
+        valor_tx = new javax.swing.JTextField();
+        id_tx = new javax.swing.JTextField();
+        hora_lab = new javax.swing.JLabel();
+        data_lab = new javax.swing.JLabel();
+        valor_lab = new javax.swing.JLabel();
+        servico_lab = new javax.swing.JLabel();
+        cliente_lab = new javax.swing.JLabel();
+        id_label = new javax.swing.JLabel();
+        agenda_titulo_lab = new javax.swing.JLabel();
+        bt_agendar = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bg_paine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
-        getContentPane().add(bg_paine, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1310, 780));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "id", "cliente", "servico", "data", "hora", "valor", "opservação"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 660, 1040, 260));
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton1.setText("Agendar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 530, 50));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 530, 390));
+
+        serviço_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(serviço_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 280, -1));
+
+        box_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(box_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 280, -1));
+
+        hora_tx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hora_txActionPerformed(evt);
+            }
+        });
+        getContentPane().add(hora_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 550, 290, -1));
+
+        data_tx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                data_txActionPerformed(evt);
+            }
+        });
+        getContentPane().add(data_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 290, -1));
+
+        valor_tx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valor_txActionPerformed(evt);
+            }
+        });
+        getContentPane().add(valor_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 290, -1));
+
+        id_tx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                id_txActionPerformed(evt);
+            }
+        });
+        getContentPane().add(id_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 290, -1));
+
+        hora_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        hora_lab.setForeground(new java.awt.Color(255, 255, 255));
+        hora_lab.setText("hora");
+        getContentPane().add(hora_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, 100, -1));
+
+        data_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        data_lab.setForeground(new java.awt.Color(255, 255, 255));
+        data_lab.setText("data");
+        getContentPane().add(data_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 100, -1));
+
+        valor_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        valor_lab.setForeground(new java.awt.Color(255, 255, 255));
+        valor_lab.setText("Valor");
+        getContentPane().add(valor_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 100, -1));
+
+        servico_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        servico_lab.setForeground(new java.awt.Color(255, 255, 255));
+        servico_lab.setText("serviço");
+        getContentPane().add(servico_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 100, -1));
+
+        cliente_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cliente_lab.setForeground(new java.awt.Color(255, 255, 255));
+        cliente_lab.setText("cliente");
+        getContentPane().add(cliente_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 100, -1));
+
+        id_label.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        id_label.setForeground(new java.awt.Color(255, 255, 255));
+        id_label.setText("id ");
+        getContentPane().add(id_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 100, -1));
+
+        agenda_titulo_lab.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        agenda_titulo_lab.setForeground(new java.awt.Color(255, 255, 255));
+        agenda_titulo_lab.setText("Agenda");
+        getContentPane().add(agenda_titulo_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, 180, -1));
+
+        bt_agendar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
+        getContentPane().add(bt_agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 1300, 860));
 
         bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/AgendaFundo.png"))); // NOI18N
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, -20, 1370, 1040));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void id_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_txActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_txActionPerformed
+
+    private void valor_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valor_txActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_valor_txActionPerformed
+
+    private void data_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_txActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_data_txActionPerformed
+
+    private void hora_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hora_txActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hora_txActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,7 +206,25 @@ public class agenda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel agenda_titulo_lab;
     private javax.swing.JLabel bg;
-    private javax.swing.JLabel bg_paine;
+    private javax.swing.JComboBox<String> box_cliente;
+    private javax.swing.JLabel bt_agendar;
+    private javax.swing.JLabel cliente_lab;
+    private javax.swing.JLabel data_lab;
+    private javax.swing.JTextField data_tx;
+    private javax.swing.JLabel hora_lab;
+    private javax.swing.JTextField hora_tx;
+    private javax.swing.JLabel id_label;
+    private javax.swing.JTextField id_tx;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel servico_lab;
+    private javax.swing.JComboBox<String> serviço_box;
+    private javax.swing.JLabel valor_lab;
+    private javax.swing.JTextField valor_tx;
     // End of variables declaration//GEN-END:variables
 }

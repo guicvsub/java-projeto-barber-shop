@@ -5,7 +5,9 @@
  */
 package View;
 
+import model.Cliente;
 import model.Servico;
+import model.Usuario;
 
 /**
  *
@@ -18,6 +20,8 @@ public class main {
         System.out.println(nome);
         Servico barba = new Servico(1, "barba", 30);
         System.out.println(barba.getDescricao());
+        Cliente cliernte = new Cliente (1, "gui", "salvador", "0008");
+        System.out.println(cliernte.getId());
     }
     
 }

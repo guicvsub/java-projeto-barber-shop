@@ -77,10 +77,10 @@ public class agenda extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 530, 390));
 
         serviço_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(serviço_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 280, -1));
+        getContentPane().add(serviço_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 290, -1));
 
         box_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(box_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 280, -1));
+        getContentPane().add(box_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 290, -1));
 
         hora_tx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +108,7 @@ public class agenda extends javax.swing.JFrame {
                 id_txActionPerformed(evt);
             }
         });
-        getContentPane().add(id_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 290, -1));
+        getContentPane().add(id_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 290, -1));
 
         hora_lab.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         hora_lab.setForeground(new java.awt.Color(255, 255, 255));

@@ -11,6 +11,10 @@ package View;
  */
 public class menu_principal extends javax.swing.JFrame {
 
+    public static Object getInstance() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates new form menu_principal
      */

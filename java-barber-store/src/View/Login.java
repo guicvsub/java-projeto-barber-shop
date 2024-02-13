@@ -5,6 +5,7 @@
  */
 package View;
 
+import model.DAO.Banco;
 import controller.LoginController;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
@@ -17,6 +18,7 @@ import javax.swing.JTextField;
 public class Login extends javax.swing.JFrame {
 
     private final LoginController controller;
+   
 
     /**
      * Creates new form Login
@@ -25,6 +27,7 @@ public class Login extends javax.swing.JFrame {
         
         initComponents();
     controller= new LoginController(this);
+    Banco.inicia();
     
     }
 
@@ -94,9 +97,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_user_txActionPerformed
 
     private void entrar_btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrar_btActionPerformed
-        this.controller.fizTarefa();
-        System.out.println(user_tx.getText());
-        System.out.println(password_tx.getText());
+     this.controller.entrarNoSistema();
+        
+        
     }//GEN-LAST:event_entrar_btActionPerformed
 
     /**

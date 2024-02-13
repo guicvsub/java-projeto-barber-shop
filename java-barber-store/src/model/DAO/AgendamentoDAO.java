@@ -22,7 +22,7 @@ public class AgendamentoDAO {
           
         if(agendamento.getId() == 0){
             agendamento.setId(proximoId());
-            Banco.Agendamento.add(agendamento);
+            Banco.agendamento.add(agendamento);
         }
         
         

@@ -5,8 +5,11 @@
  */
 package controller;
 
+import model.DAO.UsuarioDAO;
 import View.Login;
+import View.menu_principal;
 import controller.Helper.LoginHelper;
+import model.DAO.Banco;
 import model.Usuario;
 
 /**
@@ -21,14 +24,26 @@ public class LoginController {
     public LoginController(Login view) {
         this.view = view;
         this.helper= new LoginHelper(view);
+          Banco.inicia();
+
+        
     }
+        public void entrarNoSistema(){
+          
     
-    public void fizTarefa(){
-        System.out.println("busquei algo no banco de dados");
-        this.view.exibeMensagem("execultei a tarefa");
-    }
-    public void entrarNosisema(){
-        Usuario usuario = helper.obterModelo();
+       Usuario usuario =helper.obterModelo();
+       UsuarioDAO usuarioDAO = new UsuarioDAO();
+       Usuario user_at = usuarioDAO.selectPorNomeESenha(usuario);
+       if( user_at != null){
+           menu_principal menu= new menu_principal();
+           menu.setVisible(true);
+           
+       }
+       else{
+           view.exibeMensagem("usuario ou senhas invalidos");
+           
+       } 
     
     }
+  
 }

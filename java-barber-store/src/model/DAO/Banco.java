@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model.DAO;
+package model.DAO;
 
 import model.Agendamento;
 import model.Cliente;
@@ -21,16 +21,15 @@ public class Banco {
     public static ArrayList<Cliente> cliente;
     public static ArrayList<Servico> servico;
     public static ArrayList<Agendamento> agendamento;
-    static Object Agendamento;
     
     
     public static void inicia(){
     
         //Instancia os Objetos
-        usuario = new ArrayList<Usuario>();
-        cliente = new ArrayList<Cliente>();
-        servico = new ArrayList<Servico>();
-        agendamento = new ArrayList<Agendamento>();
+        usuario = new ArrayList<>();
+        cliente = new ArrayList<>();
+        servico = new ArrayList<>();
+        agendamento = new ArrayList<>();
         
         //criando elementos
         

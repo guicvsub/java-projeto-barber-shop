@@ -5,17 +5,24 @@
  */
 package View;
 
+import controller.AgendaController;
+import javax.swing.JTable;
+
 /**
  *
  * @author Pichau
  */
 public class agenda extends javax.swing.JFrame {
 
+    private final AgendaController controller;
+
     /**
      * Creates new form agenda
      */
     public agenda() {
         initComponents();
+        controller = new AgendaController(this);
+        iniciar();
     }
 
     /**
@@ -48,7 +55,7 @@ public class agenda extends javax.swing.JFrame {
         bt_agendar = new javax.swing.JLabel();
         bg = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -227,4 +234,19 @@ public class agenda extends javax.swing.JFrame {
     private javax.swing.JLabel valor_lab;
     private javax.swing.JTextField valor_tx;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+        
+    
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
+    public void setjTable1(JTable jTable1) {
+        this.jTable1 = jTable1;
+    }
+    
 }

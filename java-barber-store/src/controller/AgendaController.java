@@ -57,5 +57,8 @@ public class AgendaController {
         helper.preencherServicos(servicos);
      
  }
-      
+ public void atualizaValor(){
+ Servico servico = helper.obterServico();
+ helper.srtarValor(servico.getValor());
+ }
 }

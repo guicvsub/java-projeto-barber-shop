@@ -6,8 +6,10 @@
 package View;
 
 import controller.AgendaController;
+import java.awt.HeadlessException;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -44,7 +46,7 @@ public class agenda extends javax.swing.JFrame {
         box_cliente = new javax.swing.JComboBox<>();
         hora_tx = new javax.swing.JTextField();
         data_tx = new javax.swing.JTextField();
-        valor_tx = new javax.swing.JTextField();
+        campovalor = new javax.swing.JTextField();
         id_tx = new javax.swing.JTextField();
         hora_lab = new javax.swing.JLabel();
         data_lab = new javax.swing.JLabel();
@@ -84,6 +86,11 @@ public class agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 530, 390));
 
+        box_serviço.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                box_serviçoItemStateChanged(evt);
+            }
+        });
         box_serviço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 box_serviçoActionPerformed(evt);
@@ -112,12 +119,12 @@ public class agenda extends javax.swing.JFrame {
         });
         getContentPane().add(data_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 490, 290, -1));
 
-        valor_tx.addActionListener(new java.awt.event.ActionListener() {
+        campovalor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valor_txActionPerformed(evt);
+                campovalorActionPerformed(evt);
             }
         });
-        getContentPane().add(valor_tx, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 290, -1));
+        getContentPane().add(campovalor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 420, 290, -1));
 
         id_tx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,9 +181,9 @@ public class agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_id_txActionPerformed
 
-    private void valor_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valor_txActionPerformed
+    private void campovalorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campovalorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_valor_txActionPerformed
+    }//GEN-LAST:event_campovalorActionPerformed
 
     private void data_txActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_txActionPerformed
         // TODO add your handling code here:
@@ -193,6 +200,12 @@ public class agenda extends javax.swing.JFrame {
     private void box_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box_clienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_box_clienteActionPerformed
+
+    private void box_serviçoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_box_serviçoItemStateChanged
+        // TODO add your handling code here:
+        this.controller.atualizaValor();
+        
+    }//GEN-LAST:event_box_serviçoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -235,6 +248,7 @@ public class agenda extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> box_cliente;
     private javax.swing.JComboBox<String> box_serviço;
     private javax.swing.JLabel bt_agendar;
+    private javax.swing.JTextField campovalor;
     private javax.swing.JLabel cliente_lab;
     private javax.swing.JLabel data_lab;
     private javax.swing.JTextField data_tx;
@@ -249,13 +263,13 @@ public class agenda extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel servico_lab;
     private javax.swing.JLabel valor_lab;
-    private javax.swing.JTextField valor_tx;
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
         this.controller.atualizaTabela();
         this.controller.atualizaCliente();
         this.controller.atualizaServico();
+        this.controller.atualizaValor();
     
     }
 
@@ -282,5 +296,17 @@ public class agenda extends javax.swing.JFrame {
     public void setBox_serviço(JComboBox<String> box_serviço) {
         this.box_serviço = box_serviço;
     }
+
+    public JTextField getCampovalor() {
+        return campovalor;
+    }
+
+    public void setCampovalor(JTextField campovalor) {
+        this.campovalor = campovalor;
+    }
+
     
+    
+
+ 
 }

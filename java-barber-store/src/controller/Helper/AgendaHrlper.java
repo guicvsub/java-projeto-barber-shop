@@ -53,4 +53,17 @@ public class AgendaHrlper {
         }
        
     }
-}
+
+    public Servico obterServico() {
+      return(Servico) view.getBox_serviço().getSelectedItem();
+    }
+
+    
+       public void srtarValor(float valor) {
+    view.getCampovalor().setText(valor+"");
+
+       
+       }
+
+    }
+

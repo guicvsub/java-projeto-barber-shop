@@ -5,6 +5,8 @@
  */
 package View;
 
+import controller.menu_principal_controller;
+
 /**
  *
  * @author Pichau
@@ -14,12 +16,15 @@ public class menu_principal extends javax.swing.JFrame {
     public static Object getInstance() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    private final menu_principal_controller contrroller;
 
     /**
      * Creates new form menu_principal
      */
     public menu_principal() {
         initComponents();
+    
+        contrroller = new menu_principal_controller(this);
     }
 
     /**
@@ -80,6 +85,11 @@ public class menu_principal extends javax.swing.JFrame {
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/icons/agenda32-icon.png"))); // NOI18N
         jMenuItem4.setText("Agenda");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuBar1.add(jMenu2);
@@ -131,6 +141,11 @@ public class menu_principal extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        this.contrroller.NevegarParaAgenda();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments

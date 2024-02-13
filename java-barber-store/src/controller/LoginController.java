@@ -37,6 +37,8 @@ public class LoginController {
        if( user_at != null){
            menu_principal menu= new menu_principal();
            menu.setVisible(true);
+           this.view.dispose();
+           
            
        }
        else{

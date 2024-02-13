@@ -31,7 +31,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="180" y="660" width="1040" height="260"/>
+          <AbsoluteConstraints x="140" y="660" width="1040" height="260"/>
         </Constraint>
       </Constraints>
 
@@ -44,9 +44,9 @@
                 <Column editable="true" title="id" type="java.lang.Object"/>
                 <Column editable="true" title="cliente" type="java.lang.Object"/>
                 <Column editable="true" title="servico" type="java.lang.Object"/>
+                <Column editable="true" title="valor" type="java.lang.Object"/>
                 <Column editable="true" title="data" type="java.lang.Object"/>
                 <Column editable="true" title="hora" type="java.lang.Object"/>
-                <Column editable="true" title="valor" type="java.lang.Object"/>
                 <Column editable="true" title="opserva&#xe7;&#xe3;o" type="java.lang.Object"/>
               </Table>
             </Property>

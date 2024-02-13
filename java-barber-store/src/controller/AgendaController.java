@@ -5,6 +5,7 @@
  */
 package controller;
 
+import Servico.Correio;
 import model.DAO.ServicoDAO;
 import model.DAO.ClienteDAO;
 import View.agenda;
@@ -65,6 +66,7 @@ public class AgendaController {
      
      Agendamento agendamento = helper.obterModelo();//buscar objeto agendamento da tela
      new AgendamentoDAO().insert(agendamento);//inserir no banco
+   
      atualizaTabela();
      helper.limparTela();
  

@@ -88,7 +88,7 @@ public class AgendaHrlper implements Ihelper{
 
     @Override
     public void limparTela() {
-       view.getId_tx().setText("");
+       view.getId_tx().setText("0");
        view.getHora_tx().setText("");
        view.getjTextArea1().setText("");
        view.getData_tx().setText("");

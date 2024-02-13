@@ -70,12 +70,12 @@ public class agenda extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "id", "cliente", "servico", "data", "hora", "valor", "opservação"
+                "id", "cliente", "servico", "valor", "data", "hora", "opservação"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 660, 1040, 260));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 660, 1040, 260));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("Agendar");

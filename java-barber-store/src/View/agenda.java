@@ -9,6 +9,7 @@ import controller.AgendaController;
 import java.awt.HeadlessException;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -78,6 +79,11 @@ public class agenda extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("Agendar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 530, 50));
 
         jTextArea1.setColumns(20);
@@ -207,6 +213,11 @@ public class agenda extends javax.swing.JFrame {
         
     }//GEN-LAST:event_box_serviçoItemStateChanged
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.controller.agendar();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -303,6 +314,38 @@ public class agenda extends javax.swing.JFrame {
 
     public void setCampovalor(JTextField campovalor) {
         this.campovalor = campovalor;
+    }
+
+    public JTextField getData_tx() {
+        return data_tx;
+    }
+
+    public void setData_tx(JTextField data_tx) {
+        this.data_tx = data_tx;
+    }
+
+    public JTextField getHora_tx() {
+        return hora_tx;
+    }
+
+    public void setHora_tx(JTextField hora_tx) {
+        this.hora_tx = hora_tx;
+    }
+
+    public JTextField getId_tx() {
+        return id_tx;
+    }
+
+    public void setId_tx(JTextField id_tx) {
+        this.id_tx = id_tx;
+    }
+
+    public JTextArea getjTextArea1() {
+        return jTextArea1;
+    }
+
+    public void setjTextArea1(JTextArea jTextArea1) {
+        this.jTextArea1 = jTextArea1;
     }
 
     

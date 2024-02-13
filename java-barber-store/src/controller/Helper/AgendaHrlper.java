@@ -12,7 +12,7 @@ import model.Servico;
  *
  * @author Pichau
  */
-public class AgendaHrlper {
+public class AgendaHrlper implements Ihelper{
    private final agenda view;
 
     public AgendaHrlper(agenda view) {
@@ -54,16 +54,45 @@ public class AgendaHrlper {
        
     }
 
+
+    
     public Servico obterServico() {
       return(Servico) view.getBox_serviço().getSelectedItem();
     }
 
-    
+         public Cliente obterCliente() {
+      return(Cliente) view.getBox_cliente().getSelectedItem();
+        }   
        public void srtarValor(float valor) {
     view.getCampovalor().setText(valor+"");
 
        
        }
+
+    @Override
+    public Agendamento obterModelo() {
+     String Idstring =view.getId_tx().getText();
+     int id =Integer.parseInt(Idstring);
+     Cliente cliente = obterCliente();
+     Servico servico = obterServico();
+     String valorString=view.getId_tx().getText();
+     float valor = Float.parseFloat(valorString);
+     String data =view.getData_tx().getText();
+     String hora = view.getHora_tx().getText();
+     String dataHora= data +" " + hora;  
+     String observaçao = view.getjTextArea1().getText();
+     
+     Agendamento agendamento =  new Agendamento(id, cliente, servico, valor, dataHora, observaçao);
+     return agendamento;
+    }
+
+    @Override
+    public void limparTela() {
+       view.getId_tx().setText("");
+       view.getHora_tx().setText("");
+       view.getjTextArea1().setText("");
+       view.getData_tx().setText("");
+    }
 
     }
 

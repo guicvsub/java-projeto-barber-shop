@@ -12,7 +12,7 @@ import model.Usuario;
  *
  * @author Pichau
  */
-public class LoginHelper {
+public class LoginHelper implements Ihelper   {
     private final Login view;
 
     public LoginHelper(Login view) {
@@ -35,4 +35,6 @@ public class LoginHelper {
     view.getUser_tx().setText("");
     view.getPassword_tx().setText("");
     }
-}
+    
+   }
+

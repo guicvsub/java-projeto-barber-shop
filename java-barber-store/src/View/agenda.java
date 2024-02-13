@@ -6,6 +6,7 @@
 package View;
 
 import controller.AgendaController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -39,7 +40,7 @@ public class agenda extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        serviço_box = new javax.swing.JComboBox<>();
+        box_serviço = new javax.swing.JComboBox<>();
         box_cliente = new javax.swing.JComboBox<>();
         hora_tx = new javax.swing.JTextField();
         data_tx = new javax.swing.JTextField();
@@ -83,11 +84,19 @@ public class agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 530, 390));
 
-        serviço_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(serviço_box, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 290, -1));
+        box_serviço.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                box_serviçoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(box_serviço, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 290, -1));
 
-        box_cliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(box_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 290, -1));
+        box_cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                box_clienteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(box_cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 266, 290, 30));
 
         hora_tx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +186,14 @@ public class agenda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_hora_txActionPerformed
 
+    private void box_serviçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box_serviçoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_box_serviçoActionPerformed
+
+    private void box_clienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_box_clienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_box_clienteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,6 +233,7 @@ public class agenda extends javax.swing.JFrame {
     private javax.swing.JLabel agenda_titulo_lab;
     private javax.swing.JLabel bg;
     private javax.swing.JComboBox<String> box_cliente;
+    private javax.swing.JComboBox<String> box_serviço;
     private javax.swing.JLabel bt_agendar;
     private javax.swing.JLabel cliente_lab;
     private javax.swing.JLabel data_lab;
@@ -230,14 +248,14 @@ public class agenda extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel servico_lab;
-    private javax.swing.JComboBox<String> serviço_box;
     private javax.swing.JLabel valor_lab;
     private javax.swing.JTextField valor_tx;
     // End of variables declaration//GEN-END:variables
 
     private void iniciar() {
         this.controller.atualizaTabela();
-        
+        this.controller.atualizaCliente();
+        this.controller.atualizaServico();
     
     }
 
@@ -247,6 +265,22 @@ public class agenda extends javax.swing.JFrame {
 
     public void setjTable1(JTable jTable1) {
         this.jTable1 = jTable1;
+    }
+
+    public JComboBox<String> getBox_cliente() {
+        return box_cliente;
+    }
+
+    public void setBox_cliente(JComboBox<String> box_cliente) {
+        this.box_cliente = box_cliente;
+    }
+
+    public JComboBox<String> getBox_serviço() {
+        return box_serviço;
+    }
+
+    public void setBox_serviço(JComboBox<String> box_serviço) {
+        this.box_serviço = box_serviço;
     }
     
 }
